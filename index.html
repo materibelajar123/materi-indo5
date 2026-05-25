@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Belajar Bahasa Indonesia Kelas 5</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f4f7fb;
+  color:#333;
+}
+
+header{
+  background:linear-gradient(135deg,#4f46e5,#6366f1);
+  color:white;
+  text-align:center;
+  padding:45px 20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+header h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+header p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:25px;
+}
+
+.hidden{
+  display:none;
+}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  color:#4f46e5;
+  margin-bottom:10px;
+}
+
+.btn{
+  background:#4f46e5;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-bottom:20px;
+  font-size:15px;
+}
+
+.btn:hover{
+  background:#4338ca;
+}
+
+.materi-box{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  line-height:1.9;
+}
+
+.materi-box h2{
+  color:#4f46e5;
+  margin-bottom:15px;
+}
+
+.materi-box h3{
+  margin-top:30px;
+  margin-bottom:10px;
+  color:#4338ca;
+}
+
+.materi-box ul,
+.materi-box ol{
+  margin-left:25px;
+  margin-top:10px;
+}
+
+.image-box{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:25px;
+  margin-bottom:25px;
+  padding:10px;
+}
+
+.materi-image{
+  width:100%;
+  max-width:650px;
+
+  /* Tinggi fleksibel */
+  height:320px;
+
+  /* Agar gambar portrait tidak terpotong */
+  object-fit:contain;
+
+  background:#e5e7eb;
+
+  border-radius:18px;
+
+  box-shadow:0 4px 15px rgba(0,0,0,0.12);
+
+  padding:8px;
+}
+
+.image-caption{
+  margin-top:12px;
+  font-size:14px;
+  color:#666;
+  text-align:center;
+  line-height:1.6;
+}
+
+.example-box{
+  padding:15px;
+  border-radius:12px;
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.correct-box{
+  background:#dcfce7;
+  border-left:6px solid #22c55e;
+}
+
+.wrong-box{
+  background:#fee2e2;
+  border-left:6px solid #ef4444;
+}
+
+.correct-title{
+  color:#166534;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.wrong-title{
+  color:#991b1b;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.note-box{
+  background:#eef2ff;
+  border-left:6px solid #4f46e5;
+  padding:15px;
+  border-radius:12px;
+  margin-top:20px;
+}
+
+.quiz-box{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  margin-top:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.question{
+  font-size:20px;
+  margin-bottom:20px;
+  font-weight:bold;
+  white-space:pre-line;
+}
+
+.option{
+  width:100%;
+  border:none;
+  background:#eef2ff;
+  padding:15px;
+  border-radius:10px;
+  margin:10px 0;
+  cursor:pointer;
+  text-align:left;
+  transition:0.3s;
+  font-size:15px;
+}
+
+.option:hover{
+  background:#c7d2fe;
+}
+
+.correct{
+  background:#22c55e !important;
+  color:white;
+}
+
+.wrong{
+  background:#ef4444 !important;
+  color:white;
+}
+
+.explanation{
+  margin-top:15px;
+  background:#f3f4f6;
+  padding:15px;
+  border-radius:10px;
+  display:none;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+}
+
+@media(max-width:768px){
+
+  .materi-image{
+    height:220px;
+    max-width:100%;
+  }
+
+  header h1{
+    font-size:30px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Belajar Bahasa Indonesia Kelas 5</h1>
+
+<p>
+Ringkasan Materi Lengkap dan Latihan Soal HOTS Interaktif
+</p>
+
+</header>
+
+<div class="container">
+
+<!-- HOMEPAGE -->
+
+<section id="home">
+
+<div class="menu-grid">
+
+<div class="card" onclick="showPage('konotasi')">
+<h3>📘 Konotasi & Denotasi</h3>
+<p>Makna sebenarnya dan makna kias.</p>
+</div>
+
+<div class="card" onclick="showPage('sebab')">
+<h3>📘 Sebab Akibat</h3>
+<p>Hubungan sebab dan akibat.</p>
+</div>
+
+<div class="card" onclick="showPage('kapital')">
+<h3>📘 Huruf Kapital</h3>
+<p>Aturan penggunaan huruf kapital.</p>
+</div>
+
+<div class="card" onclick="showPage('amanat')">
+<h3>📘 Amanat Cerita</h3>
+<p>Pesan moral dalam cerita.</p>
+</div>
+
+<div class="card" onclick="showPage('prosedur')">
+<h3>📘 Teks Prosedur</h3>
+<p>Langkah-langkah kegiatan.</p>
+</div>
+
+<div class="card" onclick="showPage('infografik')">
+<h3>📘 Infografik</h3>
+<p>Informasi visual.</p>
+</div>
+
+<div class="card" onclick="showPage('imbuhan')">
+<h3>📘 Imbuhan pe-an</h3>
+<p>Pembentukan kata benda.</p>
+</div>
+
+<div class="card" onclick="showPage('quiz')">
+<h3>📝 Latihan Soal HOTS</h3>
+<p>20 soal interaktif dan pembahasan.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- KONOTASI -->
+
+<section id="konotasi" class="hidden">
+
+<button class="btn" onclick="showPage('home')">⬅ Kembali</button>
+
+<div class="materi-box">
+
+<h2>Konotasi dan Denotasi</h2>
+
+<p>
+Denotasi adalah makna sebenarnya dari suatu kata.
+Konotasi adalah makna tambahan atau makna kias.
+</p>
+
+<div class="image-box">
+<img src="https://cdn-web.ruangguru.com/landing-pages/assets/caad043a-2a89-41f9-83ca-1b4e2538eb73.png" class="materi-image">
+</div>
+
+<h3>Denotasi</h3>
+
+<div class="example-box correct-box">
+<div class="correct-title">✅ Contoh Denotasi</div>
+<ul>
+<li>Ibu membeli apel.</li>
+<li>Kucing tidur di kursi.</li>
+</ul>
+</div>
+
+<h3>Konotasi</h3>
+
+<div class="example-box correct-box">
+<div class="correct-title">✅ Contoh Konotasi</div>
+<ul>
+<li>Kambing hitam = orang yang disalahkan</li>
+<li>Buah tangan = oleh-oleh</li>
+<li>Naik daun = terkenal</li>
+</ul>
+</div>
+
+<div class="example-box wrong-box">
+<div class="wrong-title">❌ Bukan Konotasi</div>
+<ul>
+<li>Kambing makan rumput.</li>
+<li>Ibu membeli buah.</li>
+</ul>
+</div>
+
+<div class="note-box">
+<b>Tips:</b> Jika arti kata bukan arti sebenarnya maka termasuk konotasi.
+</div>
+
+</div>
+
+</section>
+
+<!-- SEBAB AKIBAT -->
+
+<section id="sebab" class="hidden">
+
+<button class="btn" onclick="showPage('home')">⬅ Kembali</button>
+
+<div class="materi-box">
+
+<h2>Kalimat Sebab Akibat</h2>
+
+<p>
+Kalimat sebab akibat menunjukkan hubungan antara penyebab dan hasil suatu kejadian.
+</p>
+
+<div class="image-box">
+<img src="https://cdn.grid.id/crop/0x0:0x0/700x0/photo/2024/11/19/diagram-1-1jpg-20241119080558.jpg" class="materi-image">
+</div>
+
+<h3>Kata Hubung Sebab Akibat</h3>
+
+<ul>
+<li>karena</li>
+<li>sehingga</li>
+<li>akibatnya</li>
+<li>maka</li>
+</ul>
+
+<div class="example-box correct-box">
+<div class="correct-title">✅ Contoh Benar</div>
+<ul>
+<li>Karena hujan deras, jalan menjadi banjir.</li>
+<li>Rina rajin belajar sehingga nilainya bagus.</li>
+</ul>
+</div>
+
+<div class="example-box wrong-box">
+<div class="wrong-title">❌ Contoh Salah</div>
+<ul>
+<li>Karena bermain bola maka meja.</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- HURUF KAPITAL -->
+
+<section id="kapital" class="hidden">
+
+<button class="btn" onclick="showPage('home')">⬅ Kembali</button>
+
+<div class="materi-box">
+
+<h2>Huruf Kapital</h2>
+
+<p>
+Huruf kapital digunakan pada awal kalimat dan nama khusus.
+</p>
+
+<div class="image-box">
+<img src="https://lister.co.id/wp-content/uploads/2025/08/SAMPUL-BLOG-2_result-1-1024x546.jpg" class="materi-image">
+</div>
+
+<h3>Penggunaan Huruf Kapital</h3>
+
+<ul>
+<li>Awal kalimat</li>
+<li>Nama orang</li>
+<li>Nama kota</li>
+<li>Nama hari</li>
+<li>Nama sekolah</li>
+</ul>
+
+<div class="example-box correct-box">
+<div class="correct-title">✅ Contoh Benar</div>
+<ul>
+<li>Saya tinggal di Bandung.</li>
+<li>Hari Senin kami upacara.</li>
+<li>Budi bermain bola.</li>
+</ul>
+</div>
+
+<div class="example-box wrong-box">
+<div class="wrong-title">❌ Contoh Salah</div>
+<ul>
+<li>saya tinggal di bandung.</li>
+<li>hari senin kami upacara.</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- AMANAT -->
+
+<section id="amanat" class="hidden">
+
+<button class="btn" onclick="showPage('home')">⬅ Kembali</button>
+
+<div class="materi-box">
+
+<h2>Amanat Cerita</h2>
+
+<p>
+Amanat adalah pesan moral yang terdapat dalam cerita.
+</p>
+
+<div class="image-box">
+<img src="https://image.gramedia.net/plain/https://s3-ap-southeast-1.amazonaws.com/ebook-previews/90567/284827/14.jpg" class="materi-image">
+</div>
+
+<div class="example-box correct-box">
+<div class="correct-title">✅ Contoh Amanat</div>
+<ul>
+<li>Kita harus rajin belajar.</li>
+<li>Kita harus jujur.</li>
+<li>Kita harus suka menolong.</li>
+</ul>
+</div>
+
+<div class="example-box wrong-box">
+<div class="wrong-title">❌ Bukan Amanat</div>
+<ul>
+<li>Nama tokoh.</li>
+<li>Tempat kejadian.</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROSEDUR -->
+
+<section id="prosedur" class="hidden">
+
+<button class="btn" onclick="showPage('home')">⬅ Kembali</button>
+
+<div class="materi-box">
+
+<h2>Teks Prosedur</h2>
+
+<p>
+Teks prosedur berisi langkah-langkah melakukan kegiatan.
+</p>
+
+<div class="image-box">
+<img src="https://lembursingkur.wordpress.com/wp-content/uploads/2021/02/vincentius-jostein-widjaja-teks-prosedur.jpeg?w=1024" class="materi-image">
+</div>
+
+<h3>Ciri-ciri</h3>
+
+<ul>
+<li>Langkah runtut</li>
+<li>Menggunakan kalimat perintah</li>
+<li>Mudah dipahami</li>
+</ul>
+
+<div class="example-box correct-box">
+<div class="correct-title">✅ Contoh Benar</div>
+
+<ol>
+<li>Siapkan gelas.</li>
+<li>Masukkan gula.</li>
+<li>Tuangkan air panas.</li>
+</ol>
+
+</div>
+
+<div class="example-box wrong-box">
+<div class="wrong-title">❌ Contoh Salah</div>
+
+<ul>
+<li>Langkah tidak urut.</li>
+<li>Kalimat membingungkan.</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INFOGRAFIK -->
+
+<section id="infografik" class="hidden">
+
+<button class="btn" onclick="showPage('home')">⬅ Kembali</button>
+
+<div class="materi-box">
+
+<h2>Infografik</h2>
+
+<p>
+Infografik adalah penyampaian informasi menggunakan gambar dan tulisan singkat.
+</p>
+
+<div class="image-box">
+<img src="https://unair.ac.id/wp-content/uploads/2025/07/poster-aksi-perubahan-iklim-412-724x1024.png" class="materi-image">
+</div>
+
+<h3>Ciri-ciri</h3>
+
+<ul>
+<li>Informasi singkat</li>
+<li>Gambar menarik</li>
+<li>Mudah dipahami</li>
+</ul>
+
+<div class="example-box correct-box">
+<div class="correct-title">✅ Infografik yang Baik</div>
+
+<ul>
+<li>Tulisan jelas</li>
+<li>Warna menarik</li>
+<li>Gambar sesuai</li>
+</ul>
+
+</div>
+
+<div class="example-box wrong-box">
+<div class="wrong-title">❌ Infografik Kurang Baik</div>
+
+<ul>
+<li>Terlalu banyak tulisan</li>
+<li>Warna sulit dibaca</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMBUHAN -->
+
+<section id="imbuhan" class="hidden">
+
+<button class="btn" onclick="showPage('home')">⬅ Kembali</button>
+
+<div class="materi-box">
+
+<h2>Imbuhan pe-an</h2>
+
+<p>
+Imbuhan pe-an digunakan untuk membentuk kata benda.
+</p>
+
+<div class="image-box">
+<img src="https://image.idn.media/post/20240327/imbuhan%20pe-an-aBgh8QmE1ljvlw4T6LhhC0fQdGpBTstM.png" class="materi-image">
+</div>
+
+<div class="example-box correct-box">
+<div class="correct-title">✅ Contoh Benar</div>
+
+<ul>
+<li>kerja → pekerjaan</li>
+<li>mandi → pemandian</li>
+<li>layar → pelayaran</li>
+</ul>
+
+</div>
+
+<div class="example-box wrong-box">
+<div class="wrong-title">❌ Contoh Salah</div>
+
+<ul>
+<li>kerja → bekerjaan</li>
+<li>layar → berlayaran</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUIZ -->
+
+<section id="quiz" class="hidden">
+
+<button class="btn" onclick="showPage('home')">⬅ Kembali</button>
+
+<div id="quiz-container"></div>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 Belajar Bahasa Indonesia Kelas 5
+</footer>
+
+<script>
+
+function showPage(pageId){
+
+const pages=document.querySelectorAll("section");
+
+pages.forEach(page=>{
+page.classList.add("hidden");
+});
+
+document.getElementById(pageId).classList.remove("hidden");
+
+}
+
+const questions=[
+
+{
+question:"Perhatikan kalimat berikut!\n'Doni menjadi kambing hitam dalam peristiwa itu.'\nMakna kambing hitam adalah ...",
+options:[
+"hewan peliharaan",
+"orang yang disalahkan",
+"orang yang menang",
+"orang yang membantu"
+],
+answer:1,
+explanation:"Kambing hitam berarti orang yang disalahkan."
+},
+
+{
+question:"Kalimat yang menggunakan makna denotasi adalah ...",
+options:[
+"Rina menjadi buah bibir.",
+"Ayah membeli kambing di pasar.",
+"Doni naik daun.",
+"Budi menjadi tangan kanan kepala sekolah."
+],
+answer:1,
+explanation:"Kalimat tersebut menggunakan makna sebenarnya."
+},
+
+{
+question:"Karena Edo terlambat bangun, ia tidak sempat sarapan. Akibat yang tepat adalah ...",
+options:[
+"Edo bangun pagi",
+"Edo tidak sempat sarapan",
+"Edo belajar",
+"Edo bermain"
+],
+answer:1,
+explanation:"Akibatnya adalah tidak sempat sarapan."
+},
+
+{
+question:"Kalimat sebab akibat adalah ...",
+options:[
+"Siti membaca buku.",
+"Karena hujan deras, pertandingan dibatalkan.",
+"Adik bermain bola.",
+"Ibu membeli sayur."
+],
+answer:1,
+explanation:"Kalimat tersebut memiliki sebab dan akibat."
+},
+
+{
+question:"Penulisan huruf kapital yang benar adalah ...",
+options:[
+"saya tinggal di jakarta.",
+"Saya tinggal di jakarta.",
+"saya tinggal di Jakarta.",
+"Saya tinggal di Jakarta."
+],
+answer:3,
+explanation:"Awal kalimat dan nama kota harus kapital."
+},
+
+{
+question:"Kalimat yang benar adalah ...",
+options:[
+"hari minggu kami pergi ke bandung.",
+"Hari minggu kami pergi ke Bandung.",
+"Hari Minggu kami pergi ke Bandung.",
+"hari Minggu kami pergi ke bandung."
+],
+answer:2,
+explanation:"Nama hari dan kota harus kapital."
+},
+
+{
+question:"Amanat yang tepat adalah ...",
+options:[
+"Kita harus malas belajar.",
+"Kita harus rajin belajar.",
+"Kita harus tidur terus.",
+"Kita harus suka marah."
+],
+answer:1,
+explanation:"Pesan moralnya adalah rajin belajar."
+},
+
+{
+question:"Ciri teks prosedur adalah ...",
+options:[
+"langkah tidak urut",
+"menggunakan dialog",
+"langkah runtut",
+"berisi khayalan"
+],
+answer:2,
+explanation:"Teks prosedur memiliki langkah runtut."
+},
+
+{
+question:"Urutan prosedur membuat teh yang benar adalah ...",
+options:[
+"Minum teh lalu memasukkan gula.",
+"Masukkan gula, siapkan gelas.",
+"Siapkan gelas, masukkan gula, tuang air panas.",
+"Tuang air panas sebelum menyiapkan gelas."
+],
+answer:2,
+explanation:"Langkah harus runtut."
+},
+
+{
+question:"Tujuan infografik adalah ...",
+options:[
+"menulis cerita",
+"menyampaikan informasi menarik",
+"menghafal teks",
+"membuat paragraf"
+],
+answer:1,
+explanation:"Infografik membuat informasi lebih mudah dipahami."
+},
+
+{
+question:"Infografik yang baik memiliki ...",
+options:[
+"tulisan terlalu panjang",
+"gambar tidak jelas",
+"informasi singkat dan menarik",
+"warna sulit dibaca"
+],
+answer:2,
+explanation:"Infografik harus jelas dan menarik."
+},
+
+{
+question:"Kata berimbuhan pe-an yang tepat adalah ...",
+options:[
+"berkerjaan",
+"pekerjaan",
+"berlayaran",
+"pemakankan"
+],
+answer:1,
+explanation:"Kata yang benar adalah pekerjaan."
+},
+
+{
+question:"Kata dasar mandi menjadi ...",
+options:[
+"bermandian",
+"pemandian",
+"pemandi",
+"mandian"
+],
+answer:1,
+explanation:"Mandi + pe-an = pemandian."
+},
+
+{
+question:"Makna naik daun adalah ...",
+options:[
+"jatuh dari pohon",
+"menjadi terkenal",
+"menanam pohon",
+"berjalan naik"
+],
+answer:1,
+explanation:"Naik daun berarti terkenal."
+},
+
+{
+question:"Penggunaan huruf kapital yang tepat adalah ...",
+options:[
+"kami belajar Bahasa indonesia.",
+"Kami belajar bahasa Indonesia.",
+"Kami belajar Bahasa Indonesia.",
+"kami belajar bahasa indonesia."
+],
+answer:2,
+explanation:"Nama mata pelajaran harus kapital."
+},
+
+{
+question:"Mengapa teks prosedur harus urut?",
+options:[
+"agar terlihat panjang",
+"agar pembaca bingung",
+"agar mudah dipahami",
+"agar banyak tulisan"
+],
+answer:2,
+explanation:"Urutan langkah memudahkan pembaca."
+},
+
+{
+question:"Amanat cerita tentang suka membantu teman adalah ...",
+options:[
+"jadilah sombong",
+"kita harus suka menolong",
+"jangan belajar",
+"jangan membantu"
+],
+answer:1,
+explanation:"Pesan moralnya adalah suka menolong."
+},
+
+{
+question:"Kalimat sebab akibat adalah ...",
+options:[
+"Karena listrik padam, rumah menjadi gelap.",
+"Adik bermain boneka.",
+"Kami pergi ke perpustakaan.",
+"Ayah membaca koran."
+],
+answer:0,
+explanation:"Terdapat sebab dan akibat."
+},
+
+{
+question:"Kalimat konotasi adalah ...",
+options:[
+"Ibu membeli mangga.",
+"Beni menjadi bintang kelas.",
+"Kucing tidur di kursi.",
+"Adik makan roti."
+],
+answer:1,
+explanation:"Bintang kelas berarti siswa terbaik."
+},
+
+{
+question:"Mengapa huruf kapital penting?",
+options:[
+"agar tulisan sulit dibaca",
+"agar tulisan acak",
+"agar sesuai aturan bahasa",
+"agar tulisan panjang"
+],
+answer:2,
+explanation:"Huruf kapital membantu penulisan sesuai kaidah."
+}
+
+];
+
+const quizContainer=document.getElementById("quiz-container");
+
+questions.forEach((q,index)=>{
+
+const box=document.createElement("div");
+
+box.classList.add("quiz-box");
+
+box.innerHTML=`
+
+<div class="question">
+${index+1}. ${q.question}
+</div>
+
+<button class="option">${q.options[0]}</button>
+<button class="option">${q.options[1]}</button>
+<button class="option">${q.options[2]}</button>
+<button class="option">${q.options[3]}</button>
+
+<div class="explanation">
+<b>Pembahasan:</b><br>
+${q.explanation}
+</div>
+
+`;
+
+quizContainer.appendChild(box);
+
+const options=box.querySelectorAll(".option");
+const explanation=box.querySelector(".explanation");
+
+options.forEach((btn,i)=>{
+
+btn.addEventListener("click",()=>{
+
+options.forEach(b=>b.disabled=true);
+
+if(i===q.answer){
+
+btn.classList.add("correct");
+
+}else{
+
+btn.classList.add("wrong");
+options[q.answer].classList.add("correct");
+
+}
+
+explanation.style.display="block";
+
+});
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
